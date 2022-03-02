@@ -111,7 +111,7 @@
     }
     function ctok(){
       var a = document.getElementById('celsius2').value;
-      a = Number(y)
+      a = Number(a)
       ctok = a + 273.15;
       document.getElementById("resultK").innerHTML = "Temperature in Kelvin: " + ctok;
     }
@@ -125,7 +125,7 @@
     y1=Number(y1);
 
     var density= x1 / y1;
-    document.getElementById("resultp").innerHTML = "Volume in g/cm3:" + density;
+    document.getElementById("resultp").innerHTML = "Volume in g/cm3: " + density;
     };
     function Tvolume() {
     var x2=document.getElementById('mass1').value;
@@ -137,7 +137,7 @@
     y2=Number(y2);
 
     var volume= x2 / y2;
-    document.getElementById("resultV").innerHTML = "Volume of a substance in cm3" + volume;
+    document.getElementById("resultV").innerHTML = "Volume of a substance in cm3: " + volume;
     };
   </script>
 </body>
