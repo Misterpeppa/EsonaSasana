@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+/*fix alignment of text boxes
+add pages
+test javascript
+*/
+  body{
+   background-image: url(D:/Christian/Documents/web/gray.jpg);
+   background-size: cover;
+   }
+   @font-face {
+    font-family: first;
+    src: url(C:/Users/christian/Documents/web/trajan.ttf);
+    }
+    div{
+     font-family: first;
+     font-size: 100px;
+     color: #63666A;
+     font-weight: 500;
+     background-image: url(D:/Christian/Documents/web/galaxy2.gif);
+     background-repeat: repeat;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     -webkit-text-stroke-width: .5px;
+     -webkit-text-stroke-color: #E6EEF7;
+     text-align: center;
+     }
+      .btn:hover {
+      box-shadow: 1px 1px 10px 5px white;
+      -webkit-text-stroke-width: .5px;
+      -webkit-text-stroke-color: white;
+      background-image: url(D:/Christian/Documents/web/galaxy2.gif);
+      background-size: cover;
+      }
+      .btn2{
+      border: 2px solid #63666A;
+      -webkit-text-stroke-width: .5px;
+      -webkit-text-stroke-color: white;
+      color: #63666A;
+      padding: 1px 1px;
+      font-family: first;
+      font size: 1px;
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      }
+      .center {
+        margin: auto;
+        width: 60%;
+        border: 3px solid black;
+        padding: 10px;
+      }
+      form {
+        width: 400px;
+        text-align: center;
+        padding: 20px;
+      }
+      input, textarea {
+        padding: 12px;
+        margin: 6px 6px 6px 0;
+      }
+   </style>
+</head>
+<body>
+  <div>
+    CALCULA
+  </div>
+  <a href="D:/Christian/Documents/web/interactive.html" class="btn2">HOME</a>
+  <form action="" method="POST" class="center">
+    <font color="white">
+    <label for="fullName">Your Name</label> <br>
+    <input type="text" name="fullName"><br><br>
+
+    <label for="gender">Your Gender</label> <br>
+    <input type="radio" name="gender" value="male">Male<br>
+    <input type="radio" name="gender" value="female">Female<br><br>
+
+    <label for="email">Your E-mail</label> <br>
+    <input type="text" name="email"><br>
+    <br>
+
+    <label for="comments">Your Comments</label> <br>
+    <textarea name="comments"></textarea><br><br>
+
+    <input type="submit" value="Submit" class="btn">
+    <input type="reset" value="Clear" class="btn">
+    </font>
+</form>
+</body>
+</html>

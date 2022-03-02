@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  body{
+   background-image: url(D:/Christian/Documents/web/gray.jpg);
+   background-size: cover;
+   }
+   @font-face {
+    font-family: first;
+    src: url(D:/Christian/Documents/web/trajan.ttf);
+    }
+    div{
+     font-family: first;
+     font-size: 90px;
+     color: #63666A;
+     font-weight: 500;
+     background-image: url(D:/Christian/Documents/web/galaxy2.gif);
+     background-repeat: repeat;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     -webkit-text-stroke-width: .5px;
+     -webkit-text-stroke-color: #E6EEF7;
+     text-align: center;
+     }
+     .btn:hover {
+     box-shadow: 1px 1px 10px 5px white;
+     -webkit-text-stroke-width: .5px;
+     -webkit-text-stroke-color: white;
+     background-image: url(D:/Christian/Documents/web/galaxy.gif);
+     background-size: cover;
+     transition-duration: .3s;
+     }
+     .btn2{
+     border: 2px solid #63666A;
+     -webkit-text-stroke-width: .5px;
+     -webkit-text-stroke-color: white;
+     color: #63666A;
+     font-family: first;
+     position: absolute;
+     left: 5px;
+     top: 5px;
+     }
+   </style>
+</head>
+<body>
+  <div>
+    GEOMETRY
+  </div>
+  <a href="D:/Christian/Documents/web/interactive.html" class="btn2">HOME</a>
+  <font color="white">
+  <h2>Area of a Triangle</h2>
+    <p>
+      Enter the base of the triangle:<br> <input type="text" id="base">
+      <br>
+      Enter the height of the triangle:<br> <input type="text" id="height">
+      <br>
+      <button type="button" onclick="Tarea()" class="btn">Calculate</button>
+    </p>
+    <p id="result">Area of triangle:</p>
+ <h3>Height of a Triangle</h3>
+  <p>
+    Enter the area of the triangle:<br> <input type="text" id="area">
+    <br>
+    Enter the base of the triangle:<br> <input type="text" id="base2">
+    <br>
+    <button type="button" onclick="Theight()" class="btn">Calculate</button>
+  </p>
+  <p id="resultH">Height of triangle:</p>
+<h3>Perimeter of rectangle</h3>
+  <p>
+    Enter the length of the rectangle:<br> <input type="text" id="length">
+    <br>
+    Enter the width of the rectangle:<br> <input type="text" id="width">
+    <br>
+    <button type="button" onclick="Tperi()" class="btn">Calculate</button>
+  </p>
+  <p id="resultP">Perimeter of rectangle:</p>
+<h3>Area of a rectangle</h3>
+  <p>
+    Enter the length of the rectangle:<br> <input type="text" id="length2">
+    <br>
+    Enter the width of the rectangle:<br> <input type="text" id="width2">
+    <br>
+    <button type="button" onclick="Rarea()" class="btn">Calculate</button>
+  </p>
+  <p id="resultA">Area of rectangle:</p>
+<h3>Diameter of a circle</h3>
+  <p>
+    Enter the radius of the circle:<br> <input type="text" id="radius">
+    <br>
+    <button type="button" onclick="Dcircle()" class="btn">Calculate</button>
+  </p>
+  <p id="resultD">Diameter of a circle:</p>
+  </font>
+  <script>
+      function Tarea() {
+      var x=document.getElementById('base').value;
+      var y=document.getElementById('height').value;
+
+      var result=document.getElementById('result');
+
+      x=Number(x);
+      y=Number(y);
+
+      var area=x*y/2;
+      document.getElementById("result").innerHTML = "Area of triangle: " + area;
+      };
+      function Theight() {
+      var x1=document.getElementById('area').value;
+      var y1=document.getElementById('base2').value;
+
+      var result=document.getElementById('resultH');
+
+      x1=Number(x1);
+      y1=Number(y1);
+
+      var height2= 2*(x1/y1);
+      document.getElementById("resultH").innerHTML = "Height of triangle: " + height2;
+      };
+      function Tperi() {
+      var x2=document.getElementById('length').value;
+      var y2=document.getElementById('width').value;
+
+      var result=document.getElementById('resultP');
+
+      x2=Number(x2);
+      y2=Number(y2);
+
+      var perimeter= 2*(x2 + y2);
+      document.getElementById("resultP").innerHTML = "Perimeter of rectangle: " + perimeter;
+      };
+      function Rarea() {
+      var x2=document.getElementById('length2').value;
+      var y2=document.getElementById('width2').value;
+
+      var result=document.getElementById('resultA');
+
+      x3=Number(x3);
+      y3=Number(y3);
+
+      var Rarea= x3 * y3;
+      document.getElementById("resultA").innerHTML = "Area of rectangle: " + Rarea;
+
+      };
+      function Rcircle() {
+      var x4=document.getElementById('radius').value;
+
+      var result=document.getElementById('resultD');
+
+      x4=Number(x4);
+
+      var Dia= 2 * x4;
+      document.getElementById("resultD").innerHTML = "Diameter of a circle: " + Dia;
+
+      };
+  </script>
+</body>
+</html>

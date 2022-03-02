@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  body{
+   background-image: url(D:/Christian/Documents/web/gray.jpg);
+   background-size: cover;
+   }
+   @font-face {
+    font-family: first;
+    src: url(D:/Christian/Documents/web/trajan.ttf);
+    }
+    div{
+     font-family: first;
+     font-size: 90px;
+     color: #63666A;
+     font-weight: 500;
+     background-image: url(D:/Christian/Documents/web/galaxy2.gif);
+     background-repeat: repeat;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     -webkit-text-stroke-width: .5px;
+     -webkit-text-stroke-color: #E6EEF7;
+     text-align: center;
+     }
+     .btn:hover {
+     box-shadow: 1px 1px 10px 5px white;
+     -webkit-text-stroke-width: .5px;
+     -webkit-text-stroke-color: white;
+     background-image: url(D:/Christian/Documents/web/galaxy.gif);
+     background-size: cover;
+     transition-duration: .3s;
+     }
+     .btn2{
+     border: 2px solid #63666A;
+     -webkit-text-stroke-width: .5px;
+     -webkit-text-stroke-color: white;
+     color: #63666A;
+     padding: 1px 1px;
+     font-family: first;
+     font size: 1px;
+     position: absolute;
+     left: 5px;
+     top: 5px;
+     }
+   </style>
+</head>
+<body>
+  <div>
+    CHEMISTRY
+  </div>
+  <a href="D:/Christian/Documents/web/interactive.html" class="btn2">HOME</a>
+  <font color="white">
+  <h2>Temperature converter</h2>
+    <p>
+      Enter the Temperature in Celsius:<br> <input type="text" id="celsius">
+      <br>
+      <button type="button" onclick="ctof()" class="btn">Celsius to Fahrenheit</button>
+      <br>
+    </p>
+      <p id="resultF">Temperature in Fahrenheit:</p>
+
+    <p>
+      Enter the Temperature in Fahrenheit:<br> <input type="text" id="fahrenheit">
+      <br>
+      <button type="button" onclick="ftoc()" class="btn">Fahrenheit to Celsius</button>
+      <br>
+    </p>
+      <p id="resultC">Temperature in Celsius:</p>
+
+    <p>
+      Enter the Temperature in Celsius:<br> <input type="text" id="celsius2">
+      <br>
+      <button type="button" onclick="ctok()" class="btn">Celsius to Kelvin</button>
+      <br>
+    </p>
+      <p id="resultK">Temperature in Kelvin:</p>
+<h3>Calculating to get Density</h3>
+  <p>
+    Enter the mass in grams:<br> <input type="text" id="mass">
+    <br>
+    Enter the volume in cm3:<br> <input type="text" id="vol">
+    <br>
+    <button type="button" onclick="Tdense()" class="btn">Calculate</button>
+    <br>
+  </p>
+  <p id="resultp">Density in g/cm3:</p>
+<h3>Calculating to get Volume</h3>
+  <p>
+    Enter the mass in gram/s:<br> <input type="text" id="mass1">
+    <br>
+    Enter the density in g/cm3:<br> <input type="text" id="density">
+    <br>
+    <button type="button" onclick="Tvolume()" class="btn">Calculate</button>
+    <br>
+  </p>
+  <p id="resultV">Volume in cm3:</p>
+</font>
+  <script>
+    function ctof(){
+      var x = document.getElementById('celsius').value;
+      x = Number(x)
+      convertF = x * 9/5 + 32;
+      document.getElementById("resultF").innerHTML = "Temperature in Fahrenheit: " + convertF;
+    }
+    function ftoc(){
+      var y = document.getElementById('fahrenheit').value;
+      y = Number(y)
+      convertC = (y - 32) * 5/9;
+      document.getElementById("resultC").innerHTML = "Temperature in Celsius: " + convertC;
+    }
+    function ctok(){
+      var a = document.getElementById('celsius2').value;
+      a = Number(y)
+      ctok = a + 273.15;
+      document.getElementById("resultK").innerHTML = "Temperature in Kelvin: " + ctok;
+    }
+    function Tdense() {
+    var x1=document.getElementById('mass').value;
+    var y1=document.getElementById('vol').value;
+
+    var result=document.getElementById('resultp');
+
+    x1=Number(x1);
+    y1=Number(y1);
+
+    var density= x1 / y1;
+    document.getElementById("resultp").innerHTML = "Volume in g/cm3:" + density;
+    };
+    unction Tvolume() {
+    var x2=document.getElementById('mass1').value;
+    var y2=document.getElementById('density').value;
+
+    var result=document.getElementById('resultV');
+
+    x2=Number(x2);
+    y2=Number(y2);
+
+    var volume= x2 / y2;
+    document.getElementById("resultV").innerHTML = "Volume of a substance in cm3" + volume;
+    };
+  </script>
+</body>
+</html>
